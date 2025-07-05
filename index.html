@@ -6,188 +6,235 @@
   <title>Dog Nutrition - GemCommerce</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-orange: #f36e40;
+      --text-dark: #1a1a1a;
+      --text-light: #666;
+      --bg-light: #f9f9f9;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #222;
+      background: white;
+      color: var(--text-dark);
       line-height: 1.6;
     }
-    header, section {
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
+
+    header {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
     header h1 {
       font-size: 32px;
       font-weight: 700;
-      text-align: center;
       margin-bottom: 40px;
     }
-    .features {
-      display: flex;
-      justify-content: space-between;
+
+    .top-section {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 40px;
     }
-    .feature-box {
-      flex: 1 1 180px;
+
+    .top-section .item {
       text-align: center;
-    }
-    .feature-box img {
-      width: 48px;
-      margin-bottom: 10px;
-    }
-    .feature-box h4 {
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .center-img {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    .center-img img {
-      max-width: 220px;
-      border-radius: 50%;
-    }
-    .cta-button {
-      display: block;
-      width: fit-content;
-      margin: 40px auto 0;
-      background: #f36e40;
-      color: white;
-      font-weight: bold;
-      padding: 14px 30px;
-      border-radius: 6px;
-      text-decoration: none;
       font-size: 14px;
     }
+
+    .top-section img.center-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background: var(--main-orange);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
     .nutrition-section {
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
       align-items: center;
+      margin-top: 80px;
     }
+
     .nutrition-text {
-      flex: 1 1 500px;
+      flex: 1;
     }
+
     .nutrition-text h2 {
       font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
     }
+
     .nutrition-text p {
       font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    .nutrition-stats {
       margin-bottom: 20px;
     }
-    .nutrition-text .key-points {
-      margin-bottom: 20px;
-    }
-    .nutrition-text .key-points p {
+
+    .nutrition-stats p {
+      font-weight: 600;
+      font-size: 15px;
       margin: 6px 0;
-      font-weight: 500;
     }
-    .nutrition-image {
-      flex: 1 1 400px;
-    }
+
     .nutrition-image img {
       max-width: 100%;
       border-radius: 10px;
     }
-    .benefit-section {
+
+    .card-section {
       display: flex;
-      gap: 40px;
-      margin-top: 60px;
       flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 80px;
+    }
+
+    .card {
+      display: flex;
+      gap: 20px;
+      flex: 1 1 45%;
       align-items: center;
     }
-    .benefit-text, .benefit-img {
-      flex: 1 1 500px;
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
     }
-    .benefit-text h3 {
-      font-size: 20px;
-      font-weight: 600;
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
       margin-bottom: 10px;
     }
-    .benefit-text p {
+
+    .card p {
       font-size: 15px;
+      color: var(--text-light);
     }
-    .benefit-img img {
-      width: 100%;
-      border-radius: 10px;
+
+    @media (max-width: 768px) {
+      .top-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .card-section {
+        flex-direction: column;
+      }
+
+      .nutrition-section {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>What makes us different<br>makes them stronger</h1>
-    <div class="features">
-      <div class="feature-box">
-        <img src="https://img.icons8.com/emoji/48/dog-face.png" alt="Real Food">
-        <h4>Real Food</h4>
-        <p>Whole ingredients for dogs with real health benefits.</p>
+  <div class="container">
+    <header>
+      <h1>What makes us different<br>makes them stronger</h1>
+      <div class="top-section">
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/food-bar.png" alt="Real Food">
+          <p><strong>Real Food</strong><br>Whole ingredients for dogs with real benefits.</p>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/ingredients.png" alt="Premium Ingredients">
+          <p><strong>Premium Ingredient</strong><br>Carefully selected and of top quality.</p>
+        </div>
+        <div class="item">
+          <img class="center-img" src="https://i.ibb.co/W6rM9MN/dogfoodbowl.png" alt="Dog Bowl" />
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/fresh.png" alt="Made Fresh">
+          <p><strong>Made Fresh</strong><br>Freshly prepared to preserve nutrition.</p>
+        </div>
+        <div class="item">
+          <img src="https://img.icons8.com/color/48/development-skill.png" alt="Well Developed">
+          <p><strong>Well Developed</strong><br>Expert formulas surpassing expectations.</p>
+        </div>
       </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/emoji/48/green-circle-emoji.png" alt="Premium">
-        <h4>Premium Ingredient</h4>
-        <p>Carefully selected for variety and quality.</p>
+      <div class="cta">
+        <a href="#">Get your dog’s healthiest meal today!</a>
       </div>
-      <div class="center-img">
-        <img src="https://i.ibb.co/W6rM9MN/dogfoodbowl.png" alt="Dog Food Bowl">
-      </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/emoji/48/red-circle-emoji.png" alt="Made Fresh">
-        <h4>Made Fresh</h4>
-        <p>Cooked fresh to maintain ingredient integrity.</p>
-      </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/emoji/48/blue-circle-emoji.png" alt="Well Developed">
-        <h4>Well Developed</h4>
-        <p>Tested and refined to exceed pet nutrition expectations.</p>
-      </div>
-    </div>
-    <a href="#" class="cta-button">Get your dog’s healthiest meal today!</a>
-  </header>
+    </header>
 
-  <section class="nutrition-section">
-    <div class="nutrition-text">
-      <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
-      <p>Invest in your dog’s future with veterinarian-formulated wellness. From better digestion to shinier coats, a life of strength starts within.</p>
-      <div class="key-points">
-        <p><strong>97%</strong> Dogs show pep and fewer health breaks in weeks</p>
-        <p><strong>84%</strong> Better eyes/skin/coat and enhanced emotional mood</p>
-        <p><strong>92%</strong> Our kibble improves gut digestion and comfort</p>
+    <div class="nutrition-section">
+      <div class="nutrition-text">
+        <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
+        <p>Invest in your dog’s future with veterinarian-formulated wellness. From better digestion to shinier coats, a life of strength starts within.</p>
+        <div class="nutrition-stats">
+          <p><strong>97%</strong> Dogs showed more vitality from our formula</p>
+          <p><strong>84%</strong> Noticed improved digestion and mood</p>
+          <p><strong>92%</strong> Experienced better gut comfort</p>
+        </div>
+        <div class="cta">
+          <a href="#">Give your furry friend the gift of wholesome nutrition</a>
+        </div>
       </div>
-      <a href="#" class="cta-button">Give your furry friend the gift of wholesome nutrition</a>
+      <div class="nutrition-image">
+        <img src="https://i.ibb.co/tBvHgKR/happydogbites.png" alt="Happy Dog Bites">
+      </div>
     </div>
-    <div class="nutrition-image">
-      <img src="https://i.ibb.co/tBvHgKR/happydogbites.png" alt="Happy Dog Bites">
-    </div>
-  </section>
 
-  <section class="benefit-section">
-    <div class="benefit-img">
-      <img src="https://i.ibb.co/8rN38CW/dogsbowls.png" alt="Dogs Eating">
-    </div>
-    <div class="benefit-text">
-      <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
-      <p>This high-protein kibble is optimized for gut flora and absorption, reducing bloating and increasing stool consistency for your pup’s digestive health.</p>
-    </div>
-  </section>
+    <div class="card-section">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://i.ibb.co/8rN38CW/dogsbowls.png" alt="Dogs Eating">
+        </div>
+        <div class="card-text">
+          <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
+          <p>This high-protein kibble is optimized for gut flora and absorption, reducing bloating and increasing stool consistency for your pup’s digestive health.</p>
+        </div>
+      </div>
 
-  <section class="benefit-section">
-    <div class="benefit-text">
-      <h3>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h3>
-      <p>Our scientifically balanced formula activates healthy microbes with natural prebiotics, creating a gut-friendly environment and improving nutrient processing.</p>
+      <div class="card">
+        <div class="card-text">
+          <h3>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h3>
+          <p>Our scientifically balanced formula activates healthy microbes with natural prebiotics, creating a gut-friendly environment and improving nutrient processing.</p>
+        </div>
+        <div class="card-image">
+          <img src="https://i.ibb.co/jT7hWbC/dogkibbleclose.png" alt="Dog Kibble Close Up">
+        </div>
+      </div>
     </div>
-    <div class="benefit-img">
-      <img src="https://i.ibb.co/jT7hWbC/dogkibbleclose.png" alt="Dog Food Close Up">
-    </div>
-  </section>
+  </div>
 </body>
 </html>
