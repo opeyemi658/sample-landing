@@ -8,11 +8,13 @@
   <style>
     :root {
       --primary: #f36e40;
-      --gray: #666;
       --red: #ec3a2f;
+      --gray: #666;
+      --bg: #fafbfc;
+      --card-shadow: 0 3px 18px 0 rgba(32,48,75,0.08);
     }
-    body { font-family:'Inter',sans-serif; color:#181b1f; background:#fafbfc; margin:0; }
-    .container { max-width:1100px; margin:0 auto; padding:40px 16px 36px 16px; }
+    body { font-family:'Inter',sans-serif; color:#181b1f; background:var(--bg); margin:0; }
+    .container { max-width:1100px; margin:0 auto; padding:40px 18px 36px 18px; }
 
     /* HERO */
     .hero-heading { font-size:26px; text-align:center; font-weight:700; margin-bottom:44px; line-height:1.3; }
@@ -31,51 +33,33 @@
       flex:1 1 260px; min-width:220px; max-width:290px; display:flex; flex-direction:column; align-items:center; text-align:center;
     }
     .hero-center img {
-      width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:16px; box-shadow:0 3px 16px rgba(32,48,75,0.10);
+      width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:16px; box-shadow:var(--card-shadow);
     }
-    .hero-btn { 
-  background:var(--primary); 
-  color:#fff; 
-  padding:12px 44px;   /* Wider button */
-  border-radius:6px; 
-  text-decoration:none; 
-  font-weight:600;
-  display:inline-block;
-  margin-bottom:8px;  /* Tight gap under button */
-  font-size:12px;
-}
+    .hero-btn {
+      background:var(--primary); color:#fff; font-weight:600; border-radius:6px;
+      padding:12px 44px; font-size:15px; margin-bottom:7px; border:none; cursor:pointer; display:inline-block;
+      box-shadow:0 2px 4px 0 rgba(0,0,0,0.03);
+    }
     .hero-btn:hover { background:#c65521; }
-    .guarantee { 
-  font-size:13px; 
-  margin-bottom:8px; 
-  color:var(--gray); 
-  text-align:center;
-}
+    .guarantee { font-size:13px; color:var(--gray); margin-bottom:8px; }
     .payments {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:14px;
-  margin-top:0;
-}
-    .payments img { 
-  height:18px;         /* smaller, matches screenshot */
-  width:auto; 
-  margin:0; 
-  display:inline-block;
-  vertical-align:middle;
-}
+      display:flex; gap:8px; align-items:center; justify-content:center; margin-top:2px;
+    }
+    .payments img {
+      height:18px; width:auto; display:inline-block;
+      filter:drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+    }
 
     /* NUTRITION */
     .nutrition-row {
       display: flex; align-items:center; gap:40px;
-      background:#fff; border-radius:16px; box-shadow:0 3px 18px 0 rgba(32,48,75,0.08);
+      background:#fff; border-radius:16px; box-shadow:var(--card-shadow);
       padding:38px 34px 38px 36px; margin-bottom:36px;
     }
     .nutrition-text { flex:1; min-width:260px; }
     .nutrition-img { flex:1; min-width:250px; display:flex; align-items:center; }
     .nutrition-img img {
-      width:320px; max-width:100%; border-radius:14px; box-shadow:0 1px 8px 0 rgba(32,48,75,0.08); margin:0 auto; display:block;
+      width:320px; max-width:100%; border-radius:14px; box-shadow:var(--card-shadow); margin:0 auto; display:block;
     }
     .nutrition-text h2 {
       font-size:19px; font-weight:600; margin-bottom:14px; line-height:1.2; text-align:left;
@@ -93,7 +77,7 @@
     /* INFO BLOCKS */
     .info-block { display:flex; align-items:center; gap:34px; margin-bottom:26px;}
     .info-img img {
-      width:320px; max-width:100%; border-radius:15px; box-shadow:0 1px 8px 0 rgba(32,48,75,0.08); background:#ececec;
+      width:320px; max-width:100%; border-radius:15px; box-shadow:var(--card-shadow); background:#ececec;
     }
     .info-img { flex:1; display:flex; align-items:center; justify-content:center; min-width:180px; }
     .info-text { flex:1; min-width:260px; }
