@@ -33,20 +33,38 @@
     .hero-center img {
       width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:16px; box-shadow:0 3px 16px rgba(32,48,75,0.10);
     }
-    .hero-btn {
-      background:var(--primary); color:#fff; font-weight:600; border-radius:6px;
-      padding:12px 30px; font-size:12px; margin-bottom:9px; border:none; cursor:pointer; display:inline-block;
-      box-shadow:0 2px 4px 0 rgba(0,0,0,0.03);
-    }
+    .hero-btn { 
+  background:var(--primary); 
+  color:#fff; 
+  padding:12px 44px;   /* Wider button */
+  border-radius:6px; 
+  text-decoration:none; 
+  font-weight:600;
+  display:inline-block;
+  margin-bottom:8px;  /* Tight gap under button */
+  font-size:15px;
+}
     .hero-btn:hover { background:#c65521; }
-    .guarantee { font-size:13px; color:var(--gray); margin-bottom:8px; }
+    .guarantee { 
+  font-size:13px; 
+  margin-bottom:8px; 
+  color:var(--gray); 
+  text-align:center;
+}
     .payments {
-      display:flex; gap:8px; align-items:center; justify-content:center; margin-top:4px;
-    }
-    .payments img {
-      height:18px; width:auto; display:inline-block;
-      filter:drop-shadow(0 1px 2px rgba(0,0,0,0.08));
-    }
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-top:0;
+}
+    .payments img { 
+  height:18px;         /* smaller, matches screenshot */
+  width:auto; 
+  margin:0; 
+  display:inline-block;
+  vertical-align:middle;
+}
 
     /* NUTRITION */
     .nutrition-row {
