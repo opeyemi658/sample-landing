@@ -94,6 +94,65 @@
       padding:10px 30px; font-size:10px; border:none; margin-top:8px; display:inline-block; text-align:center;
     }
 
+    /*New CSS file for Nutrition Column*/
+
+    .nutrition-content-cols {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+
+.nutrition-main-text {
+  flex: 2;
+  background: #f8f4ee;
+  border-radius: 10px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 8px 0 rgba(243,110,64,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nutrition-main-text h2 {
+  color: #f36e40;
+}
+
+.nutrition-main-text p {
+  font-size: 12px;
+  color: #23272e;
+  margin-top: 0;
+}
+
+.nutrition-stats-col {
+  flex: 1;
+  background: #fff2f0;
+  border-radius: 10px;
+  padding: 20px 16px;
+  box-shadow: 0 2px 8px 0 rgba(236,58,47,0.08);
+  display: flex;
+  align-items: start;
+}
+
+.nutrition-stats {
+  margin: 0;
+  text-align: left;
+}
+
+.nutrition-stats p {
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+  .nutrition-content-cols {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .nutrition-main-text, .nutrition-stats-col {
+    width: 100%;
+  }
+}
+
     /* INFO BLOCKS */
     .info-block { display:flex; align-items:center; gap:34px; margin-bottom:26px;}
     .info-img img {
@@ -163,23 +222,28 @@
   </div>
 
   <!-- NUTRITION -->
-  <div class="nutrition-row">
-    <div class="nutrition-text">
+<div class="nutrition-row">
+  <div class="nutrition-content-cols">
+    <div class="nutrition-main-text">
       <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
-      <p>Invest in your dog's future with our scientifically formulated superfood-powered supplements. Give them the nutrition they deserve and watch them thrive with vitality, energy, and the joy of a longer, healthier life.</p>
-      Key Points:
-<div class="nutrition-stats">
-        <p>Key Points:</p>  
-        <p><span class="red">97%</span> Dogs choose our food over leading brands because of its real functional ingredients and delicious flavor.</p>
-        <p><span class="orange">84%</span>   Our dog food provides superior nutrition and a patented probiotic for optimal nutrient absorption.</p>
-        <p><span class="orange">92%</span>   Our dog food's high protein and fat digestibility contribute to ideal stool quality.</p>
-      </div>
+      <p>
+        Invest in your dog's future with our scientifically formulated superfood-powered supplements. Give them the nutrition they deserve and watch them thrive with vitality, energy, and the joy of a healthy life.
+      </p>
       <a class="nutrition-btn" href="#">Give your furry friend the gift of wholesome nutrition</a>
     </div>
-    <div class="nutrition-img">
-      <img src="Dog and Product.png" alt="Happy Dog">
+    <div class="nutrition-stats-col">
+      <div class="nutrition-stats">
+        <p><strong>Key Points:</strong></p>  
+        <p><span class="red">97%</span> Dogs choose our food over leading brands because of its real functional ingredients and delicious flavor.</p>
+        <p><span class="orange">84%</span> Our dog food provides superior nutrition and a patented probiotic for optimal nutrient absorption.</p>
+        <p><span class="orange">92%</span> Our dog food's high protein and fat digestibility contribute to ideal stool quality.</p>
+      </div>
     </div>
   </div>
+  <div class="nutrition-img">
+    <img src="Dog and Product.png" alt="Happy Dog">
+  </div>
+</div>
 
   <!-- INFO BLOCK 1 -->
   <div class="info-block">
