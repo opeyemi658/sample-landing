@@ -1,136 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dog Nutrition Hero Section</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Nutrition Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #f36e40;
-      --text-color: #1a1a1a;
-      --subtext: #666;
+      --text: #1a1a1a;
+      --gray: #555;
+      --light-gray: #eee;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--text-color);
       background: #fff;
+      color: var(--text);
     }
 
-    .hero {
-      max-width: 1100px;
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 60px 20px 40px;
-      text-align: center;
+      padding: 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 28px;
+    h1, h2, h3 {
       font-weight: 700;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
       margin-bottom: 50px;
     }
 
-    .features-wrapper {
+    /* Hero Section */
+    .hero {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 20px;
     }
 
-    .feature-box {
-      flex: 1 1 160px;
-      font-size: 14px;
+    .hero-feature {
+      flex: 1 1 180px;
       text-align: center;
+      font-size: 14px;
     }
 
-    .feature-box img {
-      width: 28px;
+    .hero-feature img {
+      width: 30px;
       margin-bottom: 10px;
     }
 
-    .center-image {
-      flex: 1 1 220px;
-      text-align: center;
+    .hero-center {
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .center-image img {
-      width: 160px;
-      height: 160px;
+    .hero-center img {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
     }
 
-    .cta {
-      margin-top: 30px;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: var(--primary);
-      color: #fff;
+    .hero-center .btn {
+      background: var(--primary);
+      color: white;
       font-size: 14px;
       font-weight: 600;
-      padding: 12px 26px;
+      padding: 12px 28px;
+      border-radius: 6px;
+      margin: 16px 0 4px;
+      text-decoration: none;
+    }
+
+    .hero-center p {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .payments img {
+      height: 20px;
+      margin: 0 4px;
+      vertical-align: middle;
+    }
+
+    /* Nutrition Section */
+    .nutrition {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 80px;
+      gap: 40px;
+    }
+
+    .nutrition-text {
+      flex: 1 1 500px;
+    }
+
+    .nutrition-text h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .nutrition-text p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    .stats {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stats p {
+      margin: 4px 0;
+    }
+
+    .stats strong {
+      color: #f36e40;
+    }
+
+    .nutrition-text .btn {
+      background: var(--primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 22px;
       border-radius: 6px;
       text-decoration: none;
-      margin-bottom: 8px;
     }
 
-    .cta p {
-      font-size: 12px;
-      color: var(--subtext);
-      margin-top: 4px;
+    .nutrition-img {
+      flex: 1 1 400px;
     }
 
-    .payment-icons img {
-      height: 20px;
-      margin: 0 6px;
-      vertical-align: middle;
+    .nutrition-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Double Feature Section */
+    .double-feature {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 80px;
+      gap: 40px;
+    }
+
+    .double-feature .text {
+      flex: 1 1 500px;
+    }
+
+    .double-feature .text h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .double-feature .text p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .double-feature img {
+      flex: 1 1 350px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .nutrition, .double-feature {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-center {
+        order: -1;
+      }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
+  <div class="container">
     <h1>What makes us different<br />makes them stronger</h1>
-    <div class="features-wrapper">
-      <div class="feature-box">
-        <img src="https://img.icons8.com/color/48/food-bar.png" alt="Real Food" />
-        <p><strong>Real Food</strong><br />Whole ingredients for dogs with real benefits.</p>
+    <div class="hero">
+      <div class="hero-feature">
+        <img src="https://img.icons8.com/color/48/food-bar.png" alt="Real Food">
+        <p><strong>Real Food</strong><br>Whole ingredients for dogs with real benefits.</p>
       </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/color/48/ingredients.png" alt="Premium Ingredients" />
-        <p><strong>Premium Ingredient</strong><br />Carefully selected and of top quality.</p>
+      <div class="hero-feature">
+        <img src="https://img.icons8.com/color/48/ingredients.png" alt="Premium Ingredients">
+        <p><strong>Premium Ingredient</strong><br>Carefully selected and of top quality.</p>
       </div>
-      <div class="center-image">
-        <img src="https://i.ibb.co/W6rM9MN/dogfoodbowl.png" alt="Dog Bowl" />
+      <div class="hero-center">
+        <img src="https://i.ibb.co/W6rM9MN/dogfoodbowl.png" alt="Dog Bowl">
+        <a href="#" class="btn">Get your dog’s healthiest meal today!</a>
+        <p>30-day money back guarantee</p>
+        <div class="payments">
+          <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+          <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard">
+          <img src="https://img.icons8.com/color/48/paypal.png" alt="Paypal">
+        </div>
       </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/color/48/fresh.png" alt="Made Fresh" />
-        <p><strong>Made Fresh</strong><br />Freshly prepared to preserve nutrition.</p>
+      <div class="hero-feature">
+        <img src="https://img.icons8.com/color/48/fresh.png" alt="Made Fresh">
+        <p><strong>Made Fresh</strong><br>Freshly prepared to preserve nutrition.</p>
       </div>
-      <div class="feature-box">
-        <img src="https://img.icons8.com/color/48/development-skill.png" alt="Well Developed" />
-        <p><strong>Well Developed</strong><br />Expert formulas surpassing expectations.</p>
+      <div class="hero-feature">
+        <img src="https://img.icons8.com/color/48/development-skill.png" alt="Well Developed">
+        <p><strong>Well Developed</strong><br>Expert formulas surpassing expectations.</p>
       </div>
     </div>
 
-    <div class="cta">
-      <a href="#">Get your dog’s healthiest meal today!</a>
-      <p>30-day money back guarantee</p>
-      <div class="payment-icons">
-        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
-        <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard" />
-        <img src="https://img.icons8.com/color/48/paypal.png" alt="Paypal" />
+    <div class="nutrition">
+      <div class="nutrition-text">
+        <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
+        <p>Invest in your dog’s future with veterinarian-formulated wellness. From better digestion to shinier coats, a life of strength starts within.</p>
+        <div class="stats">
+          <p><strong>97%</strong> Dogs showed more vitality from our formula</p>
+          <p><strong>84%</strong> Noticed improved digestion and mood</p>
+          <p><strong>92%</strong> Experienced better gut comfort</p>
+        </div>
+        <a href="#" class="btn">Give your furry friend the gift of wholesome nutrition</a>
+      </div>
+      <div class="nutrition-img">
+        <img src="https://i.ibb.co/tBvHgKR/happydogbites.png" alt="Happy Dog Bites">
       </div>
     </div>
-  </section>
+
+    <div class="double-feature">
+      <img src="https://i.ibb.co/8rN38CW/dogsbowls.png" alt="Dogs Eating">
+      <div class="text">
+        <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
+        <p>This high-protein kibble is optimized for gut flora and absorption, reducing bloating and increasing stool consistency for your pup’s digestive health.</p>
+      </div>
+    </div>
+
+    <div class="double-feature">
+      <div class="text">
+        <h3>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h3>
+        <p>Our scientifically balanced formula activates healthy microbes with natural prebiotics, creating a gut-friendly environment and improving nutrient processing.</p>
+      </div>
+      <img src="https://i.ibb.co/jT7hWbC/dogkibbleclose.png" alt="Dog Kibble Close Up">
+    </div>
+  </div>
 </body>
 </html>
