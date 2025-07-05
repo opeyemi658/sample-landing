@@ -27,80 +27,73 @@
     .container {
       max-width: 1024px;
       margin: 0 auto;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
 
-    h1.hero-heading {
-      text-align: center;
+    .hero-heading {
       font-size: 32px;
+      text-align: center;
       font-weight: 700;
-      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+
+    .hero-section, .nutrition-section, .info-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
       margin-bottom: 60px;
     }
 
-    .hero-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      flex: 1 1 220px;
+    .hero-side, .nutrition-text, .info-text {
+      flex: 1;
     }
 
     .hero-feature {
       display: flex;
       gap: 12px;
       align-items: flex-start;
+      margin-bottom: 32px;
     }
 
-    .hero-feature img {
-      width: 28px;
-      height: 28px;
-      flex-shrink: 0;
+    .hero-feature img, .nutrition-img img, .info-img img {
+      width: 30px;
+      height: 30px;
       margin-top: 4px;
-    }
-
-    .hero-feature p {
-      font-size: 14px;
-      line-height: 1.5;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
     .hero-center {
-      flex: 1 1 280px;
+      flex: 0 1 260px;
       text-align: center;
     }
 
     .hero-center img {
-      width: 170px;
-      height: 170px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .btn {
-      display: inline-block;
-      background-color: var(--primary);
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 12px 26px;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
+      font-weight: 600;
       margin-bottom: 10px;
+      display: inline-block;
     }
 
-    .guarantee {
-      font-size: 12px;
+    .guarantee, .nutrition-text p, .info-text p {
+      font-size: 15px;
       color: var(--gray);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      line-height: 1.6;
     }
 
     .payments img {
@@ -108,74 +101,26 @@
       margin: 0 4px;
     }
 
-    .nutrition-section,
-    .info-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-top: 60px;
-    }
-
-    .nutrition-text,
-    .info-text {
-      flex: 1 1 500px;
-    }
-
-    .nutrition-text h2 {
-      font-size: 26px;
+    .nutrition-text h2, .info-text h3 {
       font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 18px;
-    }
-
-    .nutrition-text p,
-    .info-text p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 18px;
-    }
-
-    .nutrition-stats {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .nutrition-stats p {
       font-size: 16px;
       line-height: 1.6;
+      margin-bottom: 8px;
     }
 
     .nutrition-stats strong {
       color: var(--primary);
+      font-weight: 700;
       font-size: 18px;
-      margin-right: 6px;
-      font-weight: 700;
-    }
-
-    .nutrition-img,
-    .info-img {
-      flex: 1 1 500px;
-    }
-
-    .nutrition-img img,
-    .info-img img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .info-text h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
+      margin-right: 4px;
     }
 
     @media (max-width: 768px) {
-      .hero-section,
-      .nutrition-section,
-      .info-section {
+      .hero-section, .nutrition-section, .info-section {
         flex-direction: column;
         text-align: center;
       }
@@ -183,10 +128,6 @@
       .hero-feature {
         flex-direction: column;
         align-items: center;
-      }
-
-      .hero-feature p {
-        text-align: center;
       }
     }
   </style>
@@ -198,34 +139,34 @@
     <div class="hero-section">
       <div class="hero-side">
         <div class="hero-feature">
-          <img src="https://img.icons8.com/color/48/food-bar.png" alt="Real Food">
-          <p><strong>Real Food</strong><br>Whole ingredients for dogs with real health benefits.</p>
+          <img src="https://img.icons8.com/color/48/food-bar.png">
+          <p><strong>Real Food</strong><br>Whole ingredients for dogs with real benefits.</p>
         </div>
         <div class="hero-feature">
-          <img src="https://img.icons8.com/color/48/ingredients.png" alt="Premium Ingredients">
-          <p><strong>Premium Ingredient</strong><br>Carefully selected for variety and quality.</p>
+          <img src="https://img.icons8.com/color/48/ingredients.png">
+          <p><strong>Premium Ingredient</strong><br>Selected for quality, variety, and nutrition.</p>
         </div>
       </div>
 
       <div class="hero-center">
-        <img src="Dog Bowl.png" alt="Dog Bowl">
-        <a href="#" class="btn">Get your dog’s healthiest meal today!</a>
-        <p class="guarantee">30-day money back guarantee</p>
+        <img src="https://i.ibb.co/W6rM9MN/dogfoodbowl.png">
+        <a class="btn" href="#">Get your dog’s healthy meal today!</a>
+        <p class="guarantee">30-day money-back guarantee</p>
         <div class="payments">
-          <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
-          <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard">
-          <img src="https://img.icons8.com/color/48/paypal.png" alt="Paypal">
+          <img src="https://img.icons8.com/color/48/visa.png">
+          <img src="https://img.icons8.com/color/48/mastercard-logo.png">
+          <img src="https://img.icons8.com/color/48/paypal.png">
         </div>
       </div>
 
       <div class="hero-side">
         <div class="hero-feature">
-          <img src="https://img.icons8.com/color/48/fresh.png" alt="Made Fresh">
-          <p><strong>Made Fresh</strong><br>Made fresh in small batches for better quality.</p>
+          <img src="https://img.icons8.com/color/48/fresh.png">
+          <p><strong>Made Fresh</strong><br>Freshly prepared to retain maximum nutrients.</p>
         </div>
         <div class="hero-feature">
-          <img src="https://img.icons8.com/color/48/development-skill.png" alt="Well Developed">
-          <p><strong>Well Developed</strong><br>Expert formulas that surpass expectations.</p>
+          <img src="https://img.icons8.com/color/48/development-skill.png">
+          <p><strong>Vet Developed</strong><br>Scientifically formulated for optimal health.</p>
         </div>
       </div>
     </div>
@@ -239,32 +180,13 @@
           <p><strong>84%</strong> Show better eyes/coat or behavior after 8 weeks</p>
           <p><strong>92%</strong> Show less gas or better gut digestion in 2–3 weeks</p>
         </div>
-        <a href="#" class="btn">Give your furry friend the gift of wholesome nutrition</a>
+        <a class="btn" href="#">Give your furry friend wholesome nutrition</a>
       </div>
       <div class="nutrition-img">
-        <img src="Dog and Product.png" alt="Dog with food">
+        <img src="https://i.ibb.co/tBvHgKR/happydogbites.png">
       </div>
     </div>
 
-    <div class="info-section">
-      <div class="info-img">
-        <img src="Two Dogs Eating.png" alt="Dogs Eating">
-      </div>
-      <div class="info-text">
-        <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
-        <p>This program is backed by science and delivers optimum GI restoration. Using high-quality ingredients, it ensures less bloating, softer stools, and healthier poops for your dog’s digestion.</p>
-      </div>
-    </div>
-
-    <div class="info-section">
-      <div class="info-text">
-        <h3>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h3>
-        <p>Our scientifically balanced formula activates healthy microbes with natural prebiotics, creating a gut-friendly environment and improving nutrient processing.</p>
-      </div>
-      <div class="info-img">
-        <img src="Dog Food.png" alt="Dog Kibble Close Up">
-      </div>
-    </div>
   </div>
 </body>
 </html>
