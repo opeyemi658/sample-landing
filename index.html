@@ -41,10 +41,22 @@
       box-shadow:0 2px 4px 0 rgba(0,0,0,0.03);
     }
     .hero-btn:hover { background:#c65521; }
-    .guarantee { font-size:13px; color:var(--gray); margin-bottom:8px; }
+    ..guarantee { font-size:13px; color:var(--gray); margin-bottom:0; }
     .payments {
       display:flex; gap:8px; align-items:center; justify-content:center; margin-top:2px;
     }
+    .guarantee-row {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* adjust as needed for spacing */
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.guarantee {
+  font-size:13px;
+  color:var(--gray);
+  margin-bottom:0;
+}
     .payments img {
       height:18px; width:auto; display:inline-block;
       filter:drop-shadow(0 1px 2px rgba(0,0,0,0.08));
@@ -120,12 +132,14 @@
     <div class="hero-center">
       <img src="Dog Bowl.png" alt="Dog Bowl">
       <a class="hero-btn" href="#">Get your dog’s healthiest meal today!</a>
-      <div class="guarantee">30-day money-back guarantee</div>
-      <div class="payments">
-        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
-        <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard">
-        <img src="https://img.icons8.com/color/48/paypal.png" alt="Paypal">
-      </div>
+      <div class="guarantee-row">
+  <div class="guarantee">30-day money-back guarantee</div>
+  <div class="payments">
+    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+    <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="Mastercard">
+    <img src="https://img.icons8.com/color/48/paypal.png" alt="Paypal">
+  </div>
+</div>
     </div>
     <div class="hero-side">
       <div class="hero-feature">
