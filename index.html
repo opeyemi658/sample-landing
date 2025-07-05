@@ -3,98 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dog Food Landing Page</title>
+  <title>Dog Nutrition | GemCommerce Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="margin: 0; font-family: sans-serif; background: #fff; color: #222;">
+<body>
+  <header class="header-section">
+    <h1>What makes us different<br>makes them stronger</h1>
+    <div class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/emoji/48/green-circle-emoji.png" alt="Real Food">
+        <p><strong>Real Food</strong><br>Whole ingredients for dogs with real health benefits.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/emoji/48/orange-circle-emoji.png" alt="Premium Ingredient">
+        <p><strong>Premium Ingredient</strong><br>Our kibble is enriched with varied and best quality pet stuff.</p>
+      </div>
+      <img src="https://cdn-icons-png.flaticon.com/512/1974/1974594.png" class="center-image" alt="Bowl">
+      <div class="feature">
+        <img src="https://img.icons8.com/emoji/48/blue-circle-emoji.png" alt="Made Fresh">
+        <p><strong>Made Fresh</strong><br>Prepared fresh, maintaining the integrity of the ingredients used.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/emoji/48/purple-circle-emoji.png" alt="Well Developed">
+        <p><strong>Well Developed</strong><br>Balanced diets for top nutrition, surpassing many expectations.</p>
+      </div>
+    </div>
+    <a href="#" class="cta-button">Get your dog’s healthiest meal today!</a>
+  </header>
 
-<div style="max-width:1200px; margin:auto; padding:2rem; text-align:center;">
-
-  <!-- Hero + CTA Sections -->
-  <h2 style="font-size:2.2rem; font-weight:600; line-height:1.3;">
-    What makes us different<br>makes them stronger
-  </h2>
-  <div style="display:grid; grid-template-columns: 1fr auto 1fr; align-items:center; gap:3rem; margin-top:3rem;">
-    <div style="display:flex; flex-direction:column; gap:2rem; align-items:center;">
-      <div style="text-align:center;">
-        <img src="https://i.ibb.co/mHWrVtP/icon1.png" style="width:40px;"><br>
-        <strong>Real Food</strong><br>Whole ingredients for real benefits.
-      </div>
-      <div style="text-align:center;">
-        <img src="https://i.ibb.co/QnvV8rK/icon2.png" style="width:40px;"><br>
-        <strong>Premium Ingredient</strong><br>Curated for quality and taste.
-      </div>
-    </div>
-    <div>
-      <img src="https://i.ibb.co/ncgF5Vz/dog-bowl.png" alt="Dog Bowl" style="width:220px;">
-    </div>
-    <div style="display:flex; flex-direction:column; gap:2rem; align-items:center;">
-      <div style="text-align:center;">
-        <img src="https://i.ibb.co/0ZpXt6n/icon3.png" style="width:40px;"><br>
-        <strong>Made Fresh</strong><br>Cooked in small batches.
-      </div>
-      <div style="text-align:center;">
-        <img src="https://i.ibb.co/BnDrLJG/icon4.png" style="width:40px;"><br>
-        <strong>Vet Developed</strong><br>Backed by veterinary science.
-      </div>
-    </div>
-  </div>
-  <div style="margin-top:3rem; display:flex; justify-content:center;">
-    <div style="background:#f8f9fa; padding:2rem; border-radius:10px; text-align:center; max-width:400px; width:100%;">
-      <button style="background:#ef6f4c; color:white; padding:1rem 2rem; border:none; border-radius:6px; font-size:1rem; font-weight:bold; width:100%;">
-        Get your dog’s healthy meal today!
-      </button>
-      <p style="font-size:0.9rem; margin:0.5rem 0 1.5rem;">30‑day money‑back guarantee</p>
-      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-        <img src="https://i.ibb.co/FzCqZqp/visa.png" alt="Visa" style="height:32px;">
-        <img src="https://i.ibb.co/gZtFt5C/mastercard.png" alt="Mastercard" style="height:32px;">
-        <img src="https://i.ibb.co/SXfFRm2/paypal.png" alt="PayPal" style="height:32px;">
-        <img src="https://i.ibb.co/WzwmsHq/money-back.png" alt="Guarantee" style="height:32px;">
-      </div>
-    </div>
-  </div>
-
-  <!-- Nutrition Section -->
-  <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:2rem; margin-top:4rem;">
-    <div style="flex:1 1 300px; max-width:500px; text-align:left;">
-      <h3>Nutrition is the foundation for longer, healthier lives in dogs.</h3>
-      <ul style="list-style:none; padding:0; font-size:1.1rem;">
-        <li><strong style="color:#ef6f4c;">97%</strong> Dogs show improved health from fresh diets</li>
-        <li><strong style="color:#ef6f4c;">84%</strong> Easier to maintain regular feeding routines</li>
-        <li><strong style="color:#ef6f4c;">92%</strong> Dogs show better digestion and energy</li>
+  <section class="nutrition-section">
+    <div class="nutrition-text">
+      <h2>Nutrition is the foundation for longer, healthier lives in dogs.</h2>
+      <p>Invest in your dog’s future with scientifically formulated nutrition. From improved vitality to better digestion, it all begins with what’s in their bowl.</p>
+      <ul>
+        <li><strong>97%</strong> Dogs show more pep from our feeding habits (tested across 1,000 homes)</li>
+        <li><strong>84%</strong> Our food improves vision, coat condition, and refined behavior in just 8 weeks</li>
+        <li><strong>92%</strong> Our low-filler high-power kibble aids digestibility and can reduce bad gut gases</li>
       </ul>
-      <button style="margin-top:1rem; background:#ef6f4c; color:white; padding:0.75rem 1.5rem; border:none; border-radius:5px; font-weight:bold; font-size:1rem;">
-        Give your furry friend wholesome nutrition
-      </button>
+      <a href="#" class="cta-button small">Give your furry friend the gift of wholesome nutrition</a>
     </div>
-    <div style="flex:1 1 300px; max-width:400px;">
-      <img src="https://i.ibb.co/JxDJvdn/dog-happy-bites.png" alt="Dog & Product" style="width:100%; border-radius:10px;">
+    <div class="nutrition-image">
+      <img src="https://images.unsplash.com/photo-1601758123927-196c60f2a88c?fit=crop&w=500&q=80" alt="Dog with food" />
     </div>
-  </div>
+  </section>
 
-  <!-- Benefits Section 1 -->
-  <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:2rem; margin-top:4rem;">
-    <div style="flex:1 1 300px; max-width:400px;">
-      <img src="https://i.ibb.co/SVn49JX/dogs-eating.png" alt="Two dogs eating" style="width:100%; border-radius:10px;">
+  <section class="benefits-section">
+    <div class="benefit">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?fit=crop&w=500&q=80" alt="Dogs Eating">
+      <div>
+        <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
+        <p>This program is backed by science and delivers optimum GI restoration. Using high-quality ingredients, it ensures less bloating, softer stools, and healthier poops for your dog.</p>
+      </div>
     </div>
-    <div style="flex:1 1 300px; max-width:500px; text-align:left;">
-      <h3>Improve overall gastrointestinal health for better nutrient absorption</h3>
-      <p>Formulated with prebiotics and natural fibers to enhance digestion and absorption, supporting long-term vitality.</p>
-    </div>
-  </div>
 
-  <!-- Benefits Section 2 -->
-  <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:2rem; margin-top:4rem; padding-bottom:4rem;">
-    <div style="flex:1 1 300px; max-width:500px; text-align:left;">
-      <h3>Prebiotics nourish the beneficial gut bacteria</h3>
-      <p>Help your dog maintain a balanced gut microbiome and stronger immunity with our specially crafted formula.</p>
+    <div class="benefit reverse">
+      <div>
+        <h3>Prebiotics nourish the beneficial gut bacteria, supporting digestive health</h3>
+        <p>Our kibbles contain carefully selected prebiotics that work in synergy with probiotics to increase nutrient absorption, relieve stomach discomfort, and support lasting digestive health.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1604908554251-51e2d9efc674?fit=crop&w=500&q=80" alt="Dog Food Close Up">
     </div>
-    <div style="flex:1 1 300px; max-width:400px;">
-      <img src="https://i.ibb.co/4TBgkcc/kibble-closeup.png" alt="Kibble close-up" style="width:100%; border-radius:10px;">
-    </div>
-  </div>
-
-</div>
-
+  </section>
 </body>
 </html>
-
